@@ -1,6 +1,10 @@
-<tw-storydata name="400" startnode="4" creator="Twine" creator-version="2.0.8" ifid="82EB67FB-F118-4D46-947C-27A255923490" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="living room" tags="" position="150,100">(if: $livingRoomIntro is true)[A dull ache becomes more prominent in your head as you come out of a dream you&#x27;re about to forget. &#x27;Damn&#x27;, you think, &#x27;I should have had more water before bed.&#x27;
+<tw-storydata name="400" startnode="4" creator="Twine" creator-version="2.0.8" ifid="82EB67FB-F118-4D46-947C-27A255923490" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
-Your attractive girlfriend is still sleeping on the futon you have always had in your living room, her hair shifting as the air conditioner jammed into the sliding glass balcony door slaps it around.
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+</script><tw-passagedata pid="1" name="living room" tags="" position="150,100">(if: $livingRoomIntro is true)[A dull ache becomes more prominent in your head as you come out of a dream you&#x27;re about to forget. &#x27;Damn&#x27;, you think, &#x27;I should have had more water before bed.&#x27;
+
+Your attractive girlfriend is still sleeping on the futon you have always had in your living room, her hair shifting back and forth as the air conditioner jammed into the sliding glass balcony door slaps it around.
 
 You identify and remember the kitchen, from the interesting collection of smells wafting ever toward you.
 (set: $livingRoomIntro to false)
@@ -13,6 +17,9 @@ The crying sound is moderately loud here. You realize that you have a massive sc
 [[Go to the kitchen.|kitchen]]
 [[Go to the hallway.|hallway]]</tw-passagedata><tw-passagedata pid="2" name="hallway" tags="" position="300,250">(if: $thirsty is false)[
 	The crying is actually very fucking loud here. You consider calling up the government to propose weaponizing this sound.
+    
+    The scar on your stomach rumbles, shooting pain just basically all over yourself.
+    
     [[Go to your bedroom.|bedroom]]
     [[Go to your extra bedroom.|extra bedroom]]
 ]
@@ -29,15 +36,24 @@ The spotlights providing the illusion of a classy twenty-something apartment shi
 The fridge is here, but you&#x27;re not sure if there is anything you actually want in it.
 
 [[Open fridge.|fridge]]
-[[Go to your tiny-ass living room.|living room]]</tw-passagedata><tw-passagedata pid="4" name="initialize" tags="" position="0,0">(set: $thirsty to true)
+[[Go to your tiny-ass living room.|living room]]</tw-passagedata><tw-passagedata pid="4" name="initialize" tags="" position="0,0"># 400
+
+(set: $thirsty to true)
 (set: $livingRoomIntro to true)
 (set: $kitchenIntro to true)
+(set: $screamed to false)
+(set: $grabbedStomatch to false)
+You hear nothing. Your head feels heavy. Everything is black.
 
-[[Begin.|living room]]</tw-passagedata><tw-passagedata pid="5" name="fridge" tags="" position="0,400">Light and stank spill out from the crevices between assorted things that you cared about when you first brought them home.
+[[Wake up.|living room]]</tw-passagedata><tw-passagedata pid="5" name="fridge" tags="" position="0,400">(if: $thirsty is true)[Light and stank spill out from the crevices between assorted things that you cared about when you first brought them home.
 
 A POWERTHIRST is sitting on the bottom shelf.
 
 [[Examine POWERTHIRST.]]
+]
+(if: $thirsty is false)[
+You can&#x27;t remember the last time there was anything in here you wanted. Except for the POWERTHIRST.
+]
 [[Close fridge.|kitchen]]</tw-passagedata><tw-passagedata pid="6" name="Examine POWERTHIRST." tags="" position="0,550">The GodBro&#x27;s chosen drink, POWERTHIRST, was a natural choice for purchase while perusing the aisles of Safeway while blasted last night.
 
 [[Drink POWERTHIRST.]]
@@ -50,4 +66,32 @@ You awaken once more to find yourself in your apartment. Your girlfriend is gone
 
 [[Go to your still-disappointingly-sized living room.|living room]]
 
-</tw-passagedata><tw-passagedata pid="8" name="Jesus Christ, gross, I am not drinking that." tags="" position="0,700">[[You try to look away, but the GodBro&#x27;s power draws your eyes back to the POWERTHIRST.|Examine POWERTHIRST.]]</tw-passagedata><tw-passagedata pid="9" name="bedroom" tags="" position="300,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="extra bedroom" tags="" position="450,400">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="8" name="Jesus Christ, gross, I am not drinking that." tags="" position="0,700">[[You try to look away, but the GodBro&#x27;s power draws your eyes back to the POWERTHIRST.|Examine POWERTHIRST.]]</tw-passagedata><tw-passagedata pid="9" name="bedroom" tags="" position="300,400">The bedroom is empty. You can&#x27;t find your girlfriend anywhere.
+
+[[Go back to the hallway.|hallway]]</tw-passagedata><tw-passagedata pid="10" name="extra bedroom" tags="" position="450,400">Your stomach starts to convulse as you open the door. You look at your feet, hardly able to move forward. The door swings open to reveal a massive pile of flesh. You look at it, trying to allow your eyes to focus, but you can&#x27;t seem to... or at least, what you&#x27;re seeing can&#x27;t be understood.
+
+There are arms, arms and legs. They are all miniature. They are moving. The limbs reach toward the sky, burbling and spitting. They all start to fall, coming to rest pointing at your stomach. There are hundreds of them, the mass rippling and rolling toward you.
+
+(if: $screamed is false)[
+[[Scream.|scream]]
+]
+(if: $screamed is true)[
+[[Grab your stomach in pain.|stomach]]
+]
+(if: $grabbedStomach is true)[
+You start to realize what this is. It is a pile consisting of not one baby less than 400 BABIES.
+
+There is a massive MENERGY-FUELED HOLDING CELL FOR BABIES in the corner.
+
+[[Put babies in MENERGY CELL.|put babies in cell]]
+]</tw-passagedata><tw-passagedata pid="11" name="scream" tags="" position="300,550">(set: $screamed to true)
+You have no mouth.
+
+[[Back.|extra bedroom]] </tw-passagedata><tw-passagedata pid="12" name="stomach" tags="" position="450,550">(set: $grabbedStomach to true)
+You grab your stomach, but MENERGY explodes from it. The MENERGY seems to hit the mass of limbs and spit-up, but the limbs deflect it.
+
+[[Back.|extra bedroom]]</tw-passagedata><tw-passagedata pid="13" name="put babies in cell" tags="" position="600,550">Using your MENERGY SCAR, you BEAM-LIFT the 400 BABIES into their MENERGY HOLDING CELL. The mass seems to settle, but it still shudders and pukes every few seconds.
+
+[[Go back to living room.|living room end]] </tw-passagedata><tw-passagedata pid="14" name="living room end" tags="" position="600,700">The futon looks pretty appealing, and your head still hurts. Your MENERGY SCAR is clearly out of energy for the moment, having put the 400 BABIES to rest.
+
+[[Sleep.]]</tw-passagedata><tw-passagedata pid="15" name="Sleep." tags="" position="600,850">You&#x27;ll never sleep again.</tw-passagedata></tw-storydata>
