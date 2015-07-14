@@ -1,6 +1,8 @@
 <tw-storydata name="400" startnode="4" creator="Twine" creator-version="2.0.8" ifid="82EB67FB-F118-4D46-947C-27A255923490" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script><tw-passagedata pid="1" name="living room" tags="" position="150,100">(if: $livingRoomIntro is true)[A dull ache becomes more prominent in your head as you come out of a dream you&#x27;re about to forget. &#x27;Damn&#x27;, you think, &#x27;I should have had more water before bed.&#x27;
 
@@ -42,7 +44,7 @@ The fridge is here, but you&#x27;re not sure if there is anything you actually w
 (set: $livingRoomIntro to true)
 (set: $kitchenIntro to true)
 (set: $screamed to false)
-(set: $grabbedStomatch to false)
+(set: $grabbedStomach to false)
 You hear nothing. Your head feels heavy. Everything is black.
 
 [[Wake up.|living room]]</tw-passagedata><tw-passagedata pid="5" name="fridge" tags="" position="0,400">(if: $thirsty is true)[Light and stank spill out from the crevices between assorted things that you cared about when you first brought them home.
@@ -68,18 +70,18 @@ You awaken once more to find yourself in your apartment. Your girlfriend is gone
 
 </tw-passagedata><tw-passagedata pid="8" name="Jesus Christ, gross, I am not drinking that." tags="" position="0,700">[[You try to look away, but the GodBro&#x27;s power draws your eyes back to the POWERTHIRST.|Examine POWERTHIRST.]]</tw-passagedata><tw-passagedata pid="9" name="bedroom" tags="" position="300,400">The bedroom is empty. You can&#x27;t find your girlfriend anywhere.
 
-[[Go back to the hallway.|hallway]]</tw-passagedata><tw-passagedata pid="10" name="extra bedroom" tags="" position="450,400">Your stomach starts to convulse as you open the door. You look at your feet, hardly able to move forward. The door swings open to reveal a massive pile of flesh. You look at it, trying to allow your eyes to focus, but you can&#x27;t seem to... or at least, what you&#x27;re seeing can&#x27;t be understood.
+[[Go back to the hallway.|hallway]]</tw-passagedata><tw-passagedata pid="10" name="extra bedroom" tags="" position="450,400">(if: $grabbedStomach is false)[Your stomach starts to convulse as you open the door. You look at your feet, hardly able to move forward. The door swings open to reveal a massive pile of flesh. You look at it, trying to allow your eyes to focus, but you can&#x27;t seem to... or at least, what you&#x27;re seeing can&#x27;t be understood.
 
 There are arms, arms and legs. They are all miniature. They are moving. The limbs reach toward the sky, burbling and spitting. They all start to fall, coming to rest pointing at your stomach. There are hundreds of them, the mass rippling and rolling toward you.
-
+]
 (if: $screamed is false)[
 [[Scream.|scream]]
 ]
-(if: $screamed is true)[
+(if: $screamed is true and $grabbedStomach is false)[
 [[Grab your stomach in pain.|stomach]]
 ]
 (if: $grabbedStomach is true)[
-You start to realize what this is. It is a pile consisting of not one baby less than 400 BABIES.
+You start to realize what the glistening spit-pile of baby limbs is. It is actually 400 BABIES. Your stomach continues to hurt in a maternal sort of way.
 
 There is a massive MENERGY-FUELED HOLDING CELL FOR BABIES in the corner.
 
@@ -88,7 +90,7 @@ There is a massive MENERGY-FUELED HOLDING CELL FOR BABIES in the corner.
 You have no mouth.
 
 [[Back.|extra bedroom]] </tw-passagedata><tw-passagedata pid="12" name="stomach" tags="" position="450,550">(set: $grabbedStomach to true)
-You grab your stomach, but MENERGY explodes from it. The MENERGY seems to hit the mass of limbs and spit-up, but the limbs deflect it.
+You grab your stomach, but MENERGY explodes from it. The MENERGY seems to hit the body-pile, but it&#x27;s limbs DEFLECT all MENERGY.
 
 [[Back.|extra bedroom]]</tw-passagedata><tw-passagedata pid="13" name="put babies in cell" tags="" position="600,550">Using your MENERGY SCAR, you BEAM-LIFT the 400 BABIES into their MENERGY HOLDING CELL. The mass seems to settle, but it still shudders and pukes every few seconds.
 
