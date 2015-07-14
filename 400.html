@@ -1,0 +1,53 @@
+<tw-storydata name="400" startnode="4" creator="Twine" creator-version="2.0.8" ifid="82EB67FB-F118-4D46-947C-27A255923490" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="living room" tags="" position="150,100">(if: $livingRoomIntro is true)[A dull ache becomes more prominent in your head as you come out of a dream you&#x27;re about to forget. &#x27;Damn&#x27;, you think, &#x27;I should have had more water before bed.&#x27;
+
+Your attractive girlfriend is still sleeping on the futon you have always had in your living room, her hair shifting as the air conditioner jammed into the sliding glass balcony door slaps it around.
+
+You identify and remember the kitchen, from the interesting collection of smells wafting ever toward you.
+(set: $livingRoomIntro to false)
+]
+You still can&#x27;t believe you put a futon in here.
+(if: $thirsty is false)[
+The crying sound is moderately loud here. You realize that you have a massive scar on your stomach, but you don&#x27;t know what it is from. You decide that if a doctor were to ask you to rate the pain, it would be a POWERTHIRST 8.
+]
+
+[[Go to the kitchen.|kitchen]]
+[[Go to the hallway.|hallway]]</tw-passagedata><tw-passagedata pid="2" name="hallway" tags="" position="300,250">(if: $thirsty is false)[
+	The crying is actually very fucking loud here. You consider calling up the government to propose weaponizing this sound.
+    [[Go to your bedroom.|bedroom]]
+    [[Go to your extra bedroom.|extra bedroom]]
+]
+(if: $thirsty is true)[
+	You are actually too thirsty to consider walking one more step down the hallway to perform any sort of boring actions.
+    
+    
+    [[Go to your tiny-ass living room.|living room]]
+]</tw-passagedata><tw-passagedata pid="3" name="kitchen" tags="" position="50,250">(if: $kitchenIntro is true)[In your kitchen, you see assorted garbage and smell assorted rotting vegetable and chicken flesh. However, you are used to this smell, so it makes you hungry. But you are infinitely more thirsty. Fortunately, there is a refridgerator.
+(set: $kitchenIntro to false)
+]
+The spotlights providing the illusion of a classy twenty-something apartment shine unpleasant light into your mindskull.
+
+The fridge is here, but you&#x27;re not sure if there is anything you actually want in it.
+
+[[Open fridge.|fridge]]
+[[Go to your tiny-ass living room.|living room]]</tw-passagedata><tw-passagedata pid="4" name="initialize" tags="" position="0,0">(set: $thirsty to true)
+(set: $livingRoomIntro to true)
+(set: $kitchenIntro to true)
+
+[[Begin.|living room]]</tw-passagedata><tw-passagedata pid="5" name="fridge" tags="" position="0,400">Light and stank spill out from the crevices between assorted things that you cared about when you first brought them home.
+
+A POWERTHIRST is sitting on the bottom shelf.
+
+[[Examine POWERTHIRST.]]
+[[Close fridge.|kitchen]]</tw-passagedata><tw-passagedata pid="6" name="Examine POWERTHIRST." tags="" position="0,550">The GodBro&#x27;s chosen drink, POWERTHIRST, was a natural choice for purchase while perusing the aisles of Safeway while blasted last night.
+
+[[Drink POWERTHIRST.]]
+[[Jesus Christ, gross, I am not drinking that.]]</tw-passagedata><tw-passagedata pid="7" name="Drink POWERTHIRST." tags="" position="150,550">Your head goes numb, as does your face. But you love it.
+	
+However, your immediate newfound love for the POWERTHIRST awakens feelings and abilities beyond your wildest dreams. The room starts to spin, and your headache implodes.
+	
+You awaken once more to find yourself in your apartment. Your girlfriend is gone. There is a faint crying sound.
+(set: $thirsty to false)
+
+[[Go to your still-disappointingly-sized living room.|living room]]
+
+</tw-passagedata><tw-passagedata pid="8" name="Jesus Christ, gross, I am not drinking that." tags="" position="0,700">[[You try to look away, but the GodBro&#x27;s power draws your eyes back to the POWERTHIRST.|Examine POWERTHIRST.]]</tw-passagedata><tw-passagedata pid="9" name="bedroom" tags="" position="300,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="extra bedroom" tags="" position="450,400">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
